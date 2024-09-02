@@ -1,0 +1,31 @@
+name: Deploy React App to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # 이 부분을 메인 브랜치 이름으로 변경하세요
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '20.16.0'  # 원하는 Node.js 버전 설정
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Build the project
+      run: npm run build
+
+    - name: Deploy to GitHub Pages
+      run: npm run deploy
+
+    - name: Clean up
+      run: rm -rf node_modules

@@ -1,20 +1,22 @@
 import logo from './logo.svg';
-import './App.css';
+import './css/App.css';
 import React, { useState } from 'react';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 // eslint-disable-next-line no-unused-vars
-import Video from './video-app';
-import Intro from './Intro';
-// eslint-disable-next-line no-unused-vars
-import video1 from './videos/[MSA5] 5팀 최혜령 개인 2차 프로젝트 결과 영상.mp4';
+// import Video from './video-app';
+import Intro from './components/Intro';
+import Introduction from './personal/Introduction';
+import KosaPortfolio from './kosa/KosaPortfolio';
+import UniversityPortfolio from './uni/UniversityPortfolio';
 
 
 function App() {
-  // eslint-disable-next-line no-unused-vars
-  const videoData = {
-    url: video1,
-    title: "3차 미니프로젝트 - TimeMarket",
-    description: "TimeMarket 프로젝트에 대한 설명입니다.",
-  };
+  // // eslint-disable-next-line no-unused-vars
+  // const videoData = {
+  //   url: video1,
+  //   title: "3차 미니프로젝트 - TimeMarket",
+  //   description: "TimeMarket 프로젝트에 대한 설명입니다.",
+  // };
 
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
@@ -23,6 +25,7 @@ function App() {
   }
 
   return (
+    <Router>
     <div className="App">
       <header className="App-header">
         {/* 사이드바 토글 버튼 */}
@@ -36,31 +39,27 @@ function App() {
         {/* 사이드바 */}
         <div className={`sidebar ${sidebarOpen ? 'open' : ''}`}>
           <ul>
-            <li><a href="#introduction">About Ellie</a></li>
-            <li><a href="#university-portfolio">The University of Sydney</a></li>
-            <li><a href="#kosa-portfolio">KOSA MSA 5</a></li>
+            <li><Link to="/introduction">About Ellie</Link></li>
+            <li><Link to="/university-portfolio">The University of Sydney</Link></li>
+            <li><Link to="/kosa-portfolio">KOSA MSA 5</Link></li>
           </ul>
         </div>
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      
         {/* Video 컴포넌트를 JSX로 올바르게 사용 */}
         {/* <Video video={videoData} /> */}
-        <div className="kosa-videos" style={{ backgroundColor: 'wheat' }} width="90%">
-          <Intro />
-        </div>
-
+        
+        
       </header>
+      <main>
+          <Routes>
+            <Route path="/introduction" element={<Introduction />} />
+            <Route path="/kosa-portfolio" element={<KosaPortfolio />} />
+            <Route path="/university-portfolio" element={<UniversityPortfolio />} />
+          </Routes>
+      </main>
     </div>
+    
+    </Router>
   );
 }
 

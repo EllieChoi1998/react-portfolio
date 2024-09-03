@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import React, { useState } from 'react';
 // eslint-disable-next-line no-unused-vars
 import Video from './video-app';
 import Intro from './Intro';
@@ -15,9 +16,31 @@ function App() {
     description: "TimeMarket 프로젝트에 대한 설명입니다.",
   };
 
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setSidebarOpen(!sidebarOpen);
+  }
+
   return (
     <div className="App">
       <header className="App-header">
+        {/* 사이드바 토글 버튼 */}
+        <div className="sidebar-toggle-button" onClick={toggleSidebar}>
+          {/* 버튼 디자인: 사이드바가 열려 있는 상태에 따라 클래스 변경 */}
+          <div className={`bar ${sidebarOpen ? 'open' : ''}`}></div>
+          <div className={`bar ${sidebarOpen ? 'open' : ''}`}></div>
+          <div className={`bar ${sidebarOpen ? 'open' : ''}`}></div>
+        </div>
+
+        {/* 사이드바 */}
+        <div className={`sidebar ${sidebarOpen ? 'open' : ''}`}>
+          <ul>
+            <li><a href="#introduction">About Ellie</a></li>
+            <li><a href="#university-portfolio">The University of Sydney</a></li>
+            <li><a href="#kosa-portfolio">KOSA MSA 5</a></li>
+          </ul>
+        </div>
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -32,7 +55,10 @@ function App() {
         </a>
         {/* Video 컴포넌트를 JSX로 올바르게 사용 */}
         {/* <Video video={videoData} /> */}
-        <Intro/>
+        <div className="kosa-videos" style={{ backgroundColor: 'wheat' }} width="90%">
+          <Intro />
+        </div>
+
       </header>
     </div>
   );

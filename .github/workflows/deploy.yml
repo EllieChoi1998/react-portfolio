@@ -25,6 +25,8 @@ jobs:
       run: npm run build
 
     - name: Deploy to GitHub Pages
+      env:
+        GH_TOKEN: ${{ secrets.GH_TOKEN }}
       run: npm run deploy
 
     - name: Clean up

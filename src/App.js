@@ -1,10 +1,10 @@
-import logo from './logo.svg';
+
 import './css/App.css';
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 // eslint-disable-next-line no-unused-vars
 // import Video from './video-app';
-import Intro from './components/Intro';
+
 import Introduction from './personal/Introduction';
 import KosaPortfolio from './kosa/KosaPortfolio';
 import UniversityPortfolio from './uni/UniversityPortfolio';

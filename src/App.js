@@ -8,6 +8,7 @@ import video1 from './videos/[MSA5] 5팀 최혜령 개인 2차 프로젝트 결�
 
 
 function App() {
+  // eslint-disable-next-line no-unused-vars
   const videoData = {
     url: video1,
     title: "3차 미니프로젝트 - TimeMarket",

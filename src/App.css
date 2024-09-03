@@ -77,11 +77,12 @@
   transition: left 0.3s ease-in-out;
   z-index: 999;
   padding-top: 60px;
+  font-size: 18px;
 }
 
 .sidebar.open {
   left: 0;
-  font-size: 18px;
+  
 }
 
 .sidebar ul {

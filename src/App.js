@@ -35,6 +35,7 @@ function App() {
           <div className={`bar ${sidebarOpen ? 'open' : ''}`}></div>
           <div className={`bar ${sidebarOpen ? 'open' : ''}`}></div>
         </div>
+        
 
         {/* 사이드바 */}
         <div className={`sidebar ${sidebarOpen ? 'open' : ''}`}>

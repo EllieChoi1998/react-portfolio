@@ -1,7 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
+// eslint-disable-next-line no-unused-vars
 import Video from './video-app';
 import Intro from './Intro';
+// eslint-disable-next-line no-unused-vars
 import video1 from './videos/[MSA5] 5팀 최혜령 개인 2차 프로젝트 결과 영상.mp4';
 
 

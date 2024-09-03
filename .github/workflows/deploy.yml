@@ -24,6 +24,11 @@ jobs:
     - name: Build the project
       run: npm run build
 
+    - name: Set up Git user
+      run: |
+        git config --global user.name "Ellie Choi"
+        git config --global user.email "ellie19981008@gmail.com"
+
     - name: Deploy to GitHub Pages
       env:
         GH_TOKEN: ${{ secrets.GH_TOKEN }}

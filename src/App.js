@@ -2,8 +2,7 @@
 import './css/App.css';
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
-// eslint-disable-next-line no-unused-vars
-// import Video from './video-app';
+
 
 import Introduction from './personal/Introduction';
 import KosaPortfolio from './kosa/KosaPortfolio';
@@ -26,7 +25,9 @@ function App() {
 
   return (
     <Router>
+      
     <div className="App">
+      
       <header className="App-header">
         {/* 사이드바 토글 버튼 */}
         <div className="sidebar-toggle-button" onClick={toggleSidebar}>
@@ -35,7 +36,7 @@ function App() {
           <div className={`bar ${sidebarOpen ? 'open' : ''}`}></div>
           <div className={`bar ${sidebarOpen ? 'open' : ''}`}></div>
         </div>
-        
+
 
         {/* 사이드바 */}
         <div className={`sidebar ${sidebarOpen ? 'open' : ''}`}>
@@ -49,10 +50,12 @@ function App() {
         {/* Video 컴포넌트를 JSX로 올바르게 사용 */}
         {/* <Video video={videoData} /> */}
         
+        <div className="footer-name">Hye Ryung Ellie Choi</div>
         
       </header>
       <main>
           <Routes>
+            <Route path="/" element={<Introduction />} /> {/* 기본 페이지 설정 */}
             <Route path="/introduction" element={<Introduction />} />
             <Route path="/kosa-portfolio" element={<KosaPortfolio />} />
             <Route path="/university-portfolio" element={<UniversityPortfolio />} />

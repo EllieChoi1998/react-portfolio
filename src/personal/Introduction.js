@@ -1,10 +1,25 @@
-import React from 'react';
+import React from 'react';  // 중복 import 제거
 import '../css/Introduction.css'; // 스타일 파일을 import 합니다.
 
-const Introduction = () => {
-  return (
-    <div id="introduction" className="introduction">
+import Mbti from '../components/charts/Mbti';
 
+
+const Introduction = () => {
+
+  const mbti_data = [
+    { labelLeft: '외향형', percentLeft: 71, labelRight: '내향형', percentRight: 29, color: '#2196f3' },
+    { labelLeft: '직관형', percentLeft: 52, labelRight: '관찰형', percentRight: 48, color: '#ff9800' },
+    { labelLeft: '사고형', percentLeft: 58, labelRight: '감정형', percentRight: 42, color: '#4caf50' },
+    { labelLeft: '계획형', percentLeft: 69, labelRight: '탐구형', percentRight: 31, color: '#9c27b0' },
+    { labelLeft: '확신형', percentLeft: 64, labelRight: '민감형', percentRight: 36, color: '#f44336' },
+  ];
+  
+  return (
+    <div id="introduction" className="introduction"> 
+    <div style={{ padding: '20px' }}>
+      <Mbti data={mbti_data} />
+    </div>
+      
       <table>
         <tbody>
           <tr>

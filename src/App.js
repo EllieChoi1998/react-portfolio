@@ -41,9 +41,9 @@ function App() {
         {/* 사이드바 */}
         <div className={`sidebar ${sidebarOpen ? 'open' : ''}`}>
           <ul>
-            <li><Link to="/introduction">About Ellie</Link></li>
-            <li><Link to="/university-portfolio">The University of Sydney</Link></li>
-            <li><Link to="/kosa-portfolio">KOSA MSA 5</Link></li>
+            <li><Link to="/react-portfolio/introduction">About Ellie</Link></li>
+            <li><Link to="/react-portfolio/university-portfolio">The University of Sydney</Link></li>
+            <li><Link to="/react-portfolio/kosa-portfolio">KOSA MSA 5</Link></li>
           </ul>
         </div>
       
@@ -55,10 +55,10 @@ function App() {
       </header>
       <main>
           <Routes>
-            <Route path="/" element={<Introduction />} /> {/* 기본 페이지 설정 */}
-            <Route path="/introduction" element={<Introduction />} />
-            <Route path="/kosa-portfolio" element={<KosaPortfolio />} />
-            <Route path="/university-portfolio" element={<UniversityPortfolio />} />
+            <Route path="/react-portfolio" element={<Introduction />} /> {/* 기본 페이지 설정 */}
+            <Route path="/react-portfolio/introduction" element={<Introduction />} />
+            <Route path="/react-portfolio/kosa-portfolio" element={<KosaPortfolio />} />
+            <Route path="/react-portfolio/university-portfolio" element={<UniversityPortfolio />} />
           </Routes>
       </main>
     </div>

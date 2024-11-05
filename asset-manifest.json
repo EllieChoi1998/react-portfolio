@@ -1,17 +1,18 @@
 {
   "files": {
     "main.css": "/react-portfolio/static/css/main.91392aaa.css",
-    "main.js": "/react-portfolio/static/js/main.be0219f0.js",
+    "main.js": "/react-portfolio/static/js/main.2ed8834d.js",
     "static/js/453.bb257cf5.chunk.js": "/react-portfolio/static/js/453.bb257cf5.chunk.js",
     "static/media/[MSA5] 5팀 최혜령 개인 2차 프로젝트 결과 영상.mp4": "/react-portfolio/static/media/[MSA5] 5팀 최혜령 개인 2차 프로젝트 결과 영상.1a481a90be2a6a2de3bd.mp4",
     "static/media/졸업식2.mp4": "/react-portfolio/static/media/졸업식2.3538b54d9e95ff6f6cec.mp4",
+    "static/media/photo_ellie.jpg": "/react-portfolio/static/media/photo_ellie.df0e2ec6ea5909935e86.jpg",
     "index.html": "/react-portfolio/index.html",
     "main.91392aaa.css.map": "/react-portfolio/static/css/main.91392aaa.css.map",
-    "main.be0219f0.js.map": "/react-portfolio/static/js/main.be0219f0.js.map",
+    "main.2ed8834d.js.map": "/react-portfolio/static/js/main.2ed8834d.js.map",
     "453.bb257cf5.chunk.js.map": "/react-portfolio/static/js/453.bb257cf5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.91392aaa.css",
-    "static/js/main.be0219f0.js"
+    "static/js/main.2ed8834d.js"
   ]
 }

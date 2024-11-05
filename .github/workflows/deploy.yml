@@ -3,7 +3,7 @@ name: Deploy React App to GitHub Pages
 on:
   push:
     branches:
-      - main  # 이 부분을 메인 브랜치 이름으로 변경하세요
+      - main
 
 jobs:
   build-and-deploy:
@@ -16,13 +16,24 @@ jobs:
     - name: Setup Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: '20.16.0'  # 원하는 Node.js 버전 설정
+        node-version: '18.x'  # Node.js 버전을 18로 변경
+
+    - name: Cache dependencies
+      uses: actions/cache@v3
+      with:
+        path: |
+          **/node_modules
+        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-node-
 
     - name: Install dependencies
-      run: npm install
+      run: npm ci
 
-    - name: Build the project
+    - name: Build
       run: npm run build
+      env:
+        CI: false
 
     - name: Set up Git user
       run: |

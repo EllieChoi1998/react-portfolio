@@ -21,7 +21,7 @@ const Introduction = () => {
       <div id="photo">
       <img 
   src={photo_ellie} 
-  alt="Profile photo" // alt 속성 추가
+  alt="Profile Ellie photo" // alt 속성 추가
   style={{
     maxWidth: '300px',
     width: '100%',

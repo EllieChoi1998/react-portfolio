@@ -19,12 +19,16 @@ const Introduction = () => {
     <div id="introduction" className="introduction"> 
     
       <div id="photo">
-        <img src={photo_ellie}
-        style={{
-          maxWidth: '300px',
-          width: '100%',
-          height: 'auto'
-        }}/>
+      <img 
+  src={photo_ellie} 
+  alt="Profile photo" // alt 속성 추가
+  style={{
+    maxWidth: '300px',
+    width: '100%',
+    height: 'auto',
+    borderRadius: '10px'
+  }}
+/>
       </div>
       <table>
         <tbody>

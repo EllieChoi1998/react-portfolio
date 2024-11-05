@@ -40,10 +40,16 @@ jobs:
         git config --global user.name "Ellie Choi"
         git config --global user.email "ellie19981008@gmail.com"
 
-    - name: Deploy to GitHub Pages
-      env:
-        GH_TOKEN: ${{ secrets.GH_TOKEN }}
-      run: npm run deploy
-
+    # - name: Deploy to GitHub Pages
+    #   env:
+    #     GH_TOKEN: ${{ secrets.GH_TOKEN }}
+    #   run: npm run deploy
+- name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GH_TOKEN }}
+        publish_dir: ./build
+        user_name: 'Ellie Choi'
+        user_email: 'ellie19981008@gmail.com'
     - name: Clean up
       run: rm -rf node_modules

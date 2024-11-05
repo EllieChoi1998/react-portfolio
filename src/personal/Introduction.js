@@ -2,6 +2,7 @@ import React from 'react';  // 중복 import 제거
 import '../css/Introduction.css'; // 스타일 파일을 import 합니다.
 
 import Mbti from '../components/charts/Mbti';
+import photo_ellie from '../img/photo_ellie.jpg';
 
 
 const Introduction = () => {
@@ -16,10 +17,15 @@ const Introduction = () => {
   
   return (
     <div id="introduction" className="introduction"> 
-    <div style={{ padding: '20px' }}>
-      <Mbti data={mbti_data} />
-    </div>
-      
+    
+      <div id="photo">
+        <img src={photo_ellie}
+        style={{
+          maxWidth: '300px',
+          width: '100%',
+          height: 'auto'
+        }}/>
+      </div>
       <table>
         <tbody>
           <tr>
@@ -40,6 +46,10 @@ const Introduction = () => {
         <h3>학력사항</h3>
         {/* 학력 사항을 여기에 추가할 수 있습니다. */}
       </div>
+
+      <div style={{ padding: '20px' }}>
+      <Mbti data={mbti_data} />
+    </div>
     </div>
   );
 }

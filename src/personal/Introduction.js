@@ -42,7 +42,7 @@ const Introduction = () => {
           </tr>
           <tr>
             <th>나이</th>
-            <td>만 25세</td>
+            <td>만 26세</td>
           </tr>
         </tbody>
       </table>
